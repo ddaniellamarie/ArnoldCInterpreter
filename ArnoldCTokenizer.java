@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class ArnoldCTokenizer {
@@ -56,6 +57,16 @@ public class ArnoldCTokenizer {
 		}else{
 			System.out.println("No argument passed");
 		}
+
+	public Token(TokenType, String data){
+		this.type = type;
+		this.data = data;
+	}
+
+	@Override
+	public String toString(){
+		return String.format("(%s %s)", type.name(), data)
+	}
 
 	}
 
